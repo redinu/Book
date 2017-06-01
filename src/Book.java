@@ -5,6 +5,7 @@ public class Book {
 	private String author;
 	private String description;
 	private boolean inStock;
+	private int price;
 	
 	public Book(){
 		
@@ -43,11 +44,37 @@ public class Book {
 		this.inStock = inStock;
 	}
 	
+	
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
 	public void getDisplayText(){
 		System.out.println(title);
 		System.out.println(author);
 		System.out.println();
 		System.out.println(description);
+		
+		if (isInStock()){
+	    	   setPrice(20);
+	    	   System.out.println();
+	           System.out.println("Total Price: " + totalPrice(3) );
+	       } else {
+	    	   System.out.println();
+	    	   System.out.println("Sorry! Item is currently unavailable");
+	       }
+		}
+	
+	
+	public int totalPrice(int count){
+		
+		int totalPrice = count * price;
+		
+		return totalPrice;
 	}
 	
 	

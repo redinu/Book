@@ -7,12 +7,14 @@ public class BookApp {
 		b.setAuthor("Author: Sydney Sheldon");
 		b.setTitle("Title : If tomorrow comes");
 		
-		b.setDescription("This mini-series focuses on two people, Tracy Whitney and Jeff Stevens."
-				+ "\nIn the beginning, Tracy was an innocent, who was in love and pregnant, \n"
-				+ "with the son of an affluent family. She is sent to prison for a crime she didn't commit...");
-        b.setInStock(true);
+		b.setDescription("\t This mini-series focuses on two people, Tracy Whitney and Jeff Stevens."
+				+ "\n\t In the beginning, Tracy was an innocent, who was in love and pregnant, \n"
+				+ "\t with the son of an affluent family. She is sent to prison for a crime she didn't commit...");
+        b.setInStock(false);
         
-        b.getDisplayText();
-	}
+       b.getDisplayText();
+      
+       
+	}      
 
 }
