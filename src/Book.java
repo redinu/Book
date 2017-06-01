@@ -7,6 +7,7 @@ public class Book {
 	private boolean inStock;
 	private int price;
 	
+	
 	public Book(){
 		
 	}
@@ -58,16 +59,7 @@ public class Book {
 		System.out.println(author);
 		System.out.println();
 		System.out.println(description);
-		
-		if (isInStock()){
-	    	   setPrice(20);
-	    	   System.out.println();
-	           System.out.println("Total Price: " + totalPrice(3) );
-	       } else {
-	    	   System.out.println();
-	    	   System.out.println("Sorry! Item is currently unavailable");
-	       }
-		}
+	}
 	
 	
 	public int totalPrice(int count){
