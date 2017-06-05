@@ -5,7 +5,7 @@ public class Book {
 	private String author;
 	private String description;
 	private boolean inStock;
-	private int price;
+	private double price;
 	
 	
 	public Book(){
@@ -46,12 +46,12 @@ public class Book {
 	}
 	
 	
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setPrice(double d) {
+		this.price = d;
 	}
 
 	public void getDisplayText(){
@@ -62,12 +62,19 @@ public class Book {
 	}
 	
 	
-	public int totalPrice(int count){
+	public double totalPrice(int count){
 		
-		int totalPrice = count * price;
+		double totalPrice = count * price;
 		
 		return totalPrice;
 	}
+
+	@Override
+	public String toString() {
+		return  " Title: " + title + "\n Author: " + author + "\n Description: " + description 
+				+ "\n Price: " + price  ;
+	}
+	
 	
 	
 
