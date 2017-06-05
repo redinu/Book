@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 
 public class Book {
 	
@@ -53,6 +54,7 @@ public class Book {
 	public void setPrice(double d) {
 		this.price = d;
 	}
+	
 
 	public void getDisplayText(){
 		System.out.println(title);
@@ -63,16 +65,24 @@ public class Book {
 	
 	
 	public double totalPrice(int count){
-		
 		double totalPrice = count * price;
-		
+	
 		return totalPrice;
+	}
+	
+	public String formatPrice(double price2){
+		
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		int count = 1;
+		String priceString = currency.format(totalPrice(count));
+		return priceString;
+	
 	}
 
 	@Override
 	public String toString() {
 		return  " Title: " + title + "\n Author: " + author + "\n Description: " + description 
-				+ "\n Price: " + price  ;
+				+ "\n Price: " + formatPrice(price)  ;
 	}
 	
 	
