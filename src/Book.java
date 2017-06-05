@@ -7,7 +7,7 @@ public class Book {
 	private String description;
 	private boolean inStock;
 	private double price;
-	
+	private String SKU;
 	
 	public Book(){
 		
@@ -18,6 +18,10 @@ public class Book {
 		author = writer;
 		description = dis;
 		inStock = available;
+	}
+	
+	public Book(String sku){
+		SKU = sku;
 	}
 	
 	
@@ -56,11 +60,10 @@ public class Book {
 	}
 	
 
-	public void getDisplayText(){
-		System.out.println(title);
-		System.out.println(author);
-		System.out.println();
-		System.out.println(description);
+	public String getDisplayText(){
+		
+		return  " Title: " + title + "\n Author: " + author + "\n Description: " + description 
+				+ "\n Price: " + formatPrice(price) ;
 	}
 	
 	
